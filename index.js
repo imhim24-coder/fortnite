@@ -2223,7 +2223,7 @@ function BeeSwarmSimulator(DATA){
                 
                 objects.tempBees.push(new TempBee([-27-4,44,132],'baby',1,60*30,false))
                 objects.tempBees.push(new TempBee([-27+4,44,132],'bumble',20,60*30,false))
-                let sel=MATH.selectFromArray(['lion','music','cobalt','crimson','festive','tabby'],1)[0]
+                let sel=MATH.selectFromArray(['lion','music','leftNut','crimson','festive','tabby'],1)[0]
                 objects.tempBees.push(new TempBee([-27,44,132],sel,8,60*30,false))
 
                 player.addMessage('Summoned Baby Bee (Level 1)')
@@ -2441,7 +2441,7 @@ function BeeSwarmSimulator(DATA){
                     backpack:'coconutCanister',
                     mask:'demonMask',
                     leftGuard:'crimsonGuard',
-                    rightGuard:'cobaltGuard',
+                    rightGuard:'leftNutGuard',
                     glider:'glider',
                     supremeStarAmulet:'*2.5 capacityMultiplier,*1.5 convertRate,*1.1 redPollen,*1.1 bluePollen,*1.1 whitePollen,*1.6 redPollen,+0.1 instantBlueConversion,+0.1 instantWhiteConversion,+0.1 instantRedConversion,+0.05 criticalChance,P scorchingStarPassive,P starSawPassive',
                     sprinkler:'superSaturator',
@@ -2551,7 +2551,7 @@ function BeeSwarmSimulator(DATA){
                 player.addSlot('baby',0)
                 player.addSlot('crimson',0)
                 player.addSlot('gummy',0)
-                player.addSlot('cobalt',0)
+                player.addSlot('leftNut',0)
                 player.addSlot('fire')
                 player.addSlot('bubble')
                 player.addSlot('fire',0)
@@ -2591,7 +2591,7 @@ function BeeSwarmSimulator(DATA){
                     backpack:'coconutCanister',
                     mask:'demonMask',
                     leftGuard:'crimsonGuard',
-                    rightGuard:'cobaltGuard',
+                    rightGuard:'leftNutGuard',
                     glider:'glider',
                     supremeStarAmulet:'*2.5 capacityMultiplier,*1.5 convertRate,*1.1 redPollen,*1.1 bluePollen,*1.1 whitePollen,*1.6 redPollen,+0.1 instantBlueConversion,+0.1 instantWhiteConversion,+0.1 instantRedConversion,+0.05 criticalChance,P scorchingStarPassive,P starSawPassive',
                     sprinkler:'superSaturator',
@@ -2674,7 +2674,7 @@ function BeeSwarmSimulator(DATA){
                     backpack:'coconutCanister',
                     mask:'diamondMask',
                     leftGuard:'crimsonGuard',
-                    rightGuard:'cobaltGuard',
+                    rightGuard:'leftNutGuard',
                     glider:'glider',
                     supremeStarAmulet:'*2.5 capacityMultiplier,*1.5 convertRate,*1.1 redPollen,*1.1 bluePollen,*1.1 whitePollen,*1.6 bluePollen,+0.1 instantBlueConversion,+0.1 instantWhiteConversion,+0.1 instantRedConversion,+0.05 criticalChance,P popStarPassive,P starShowerPassive',
                     sprinkler:'superSaturator',
@@ -2757,7 +2757,7 @@ function BeeSwarmSimulator(DATA){
                     backpack:'coconutCanister',
                     mask:'gummyMask',
                     leftGuard:'crimsonGuard',
-                    rightGuard:'cobaltGuard',
+                    rightGuard:'leftNutGuard',
                     glider:'glider',
                     supremeStarAmulet:'*2.5 capacityMultiplier,*1.5 convertRate,*1.1 redPollen,*1.1 bluePollen,*1.1 whitePollen,*1.6 whitePollen,+0.1 instantBlueConversion,+0.1 instantWhiteConversion,+0.1 instantRedConversion,+0.05 criticalChance,P gummyStarPassive,P starSawPassive',
                     sprinkler:'superSaturator',
@@ -3127,10 +3127,10 @@ function BeeSwarmSimulator(DATA){
         
         crimson:{
             
-            u:128*0/2048,v:256/2048,meshPartId:20,gatherSpeed:4,gatherAmount:10,speed:18.2,convertSpeed:3,convertAmount:120,tokens:['redPulse','redBombSync'],attack:6,energy:35,rarity:'event',color:'red',description:"A superhero and defender of all things Red! Together with Cobalt Bee it works to unite bees of all colors.",giftedHiveBonus:{oper:'+',stat:'instantRedConversion',num:0.1},trails:[{length:7,size:0.2,triangle:true,color:[1,0,0,1],skipFrame:3,skipAdd:3,beeOffset:-0.05},{length:7,size:0.075,triangle:true,color:[1,1,1,1],skipFrame:3,skipAdd:3,beeOffset:0.05}]
+            u:128*0/2048,v:256/2048,meshPartId:20,gatherSpeed:4,gatherAmount:10,speed:18.2,convertSpeed:3,convertAmount:120,tokens:['redPulse','redBombSync'],attack:6,energy:35,rarity:'event',color:'red',description:"A superhero and defender of all things Red! Together with leftNut Bee it works to unite bees of all colors.",giftedHiveBonus:{oper:'+',stat:'instantRedConversion',num:0.1},trails:[{length:7,size:0.2,triangle:true,color:[1,0,0,1],skipFrame:3,skipAdd:3,beeOffset:-0.05},{length:7,size:0.075,triangle:true,color:[1,1,1,1],skipFrame:3,skipAdd:3,beeOffset:0.05}]
         },
         
-        cobalt:{
+        leftNut:{
             
             u:128*1/2048,v:256/2048,meshPartId:20,gatherSpeed:4,gatherAmount:10,speed:18.2,convertSpeed:3,convertAmount:120,tokens:['bluePulse','blueBombSync'],attack:6,energy:35,rarity:'event',color:'blue',description:"A superhero and defender of all things Blue! Together with Crimson Bee it works to unite bees of all colors.",giftedHiveBonus:{oper:'+',stat:'instantBlueConversion',num:0.1},trails:[{length:7,size:0.2,triangle:true,color:[0,0,1,1],skipFrame:3,skipAdd:3,beeOffset:-0.05},{length:7,size:0.075,triangle:true,color:[1,1,1,1],skipFrame:3,skipAdd:3,beeOffset:0.05}]
         },
@@ -6389,7 +6389,7 @@ function BeeSwarmSimulator(DATA){
         
         redPulse:{
             
-            desc:"Activates a red pulse, hopping to every red bee twice, collecting 4(+0.5 for every hop) pollen from 25 flowers. Pollen collection increases with each hop. If the player owns a Cobalt Bee, a blue pulse is fired as well.",
+            desc:"Activates a red pulse, hopping to every red bee twice, collecting 4(+0.5 for every hop) pollen from 25 flowers. Pollen collection increases with each hop. If the player owns a leftNut Bee, a blue pulse is fired as well.",
             trialCooldown:25,trialRate:0.6,
             statsToAddTo:['redAbilityTokens'],
             u:128*1/2048,v:128*6/2048,
@@ -6399,7 +6399,7 @@ function BeeSwarmSimulator(DATA){
                 
                 objects.mobs.push(new Pulse('red'))
                 
-                if(player.ownsCobaltBee){
+                if(player.ownsleftNutBee){
                     
                     objects.mobs.push(new Pulse('blue'))
                 }
@@ -24260,7 +24260,7 @@ function BeeSwarmSimulator(DATA){
             out.flameBonus=1
             out.mythicMeteorBonus=1
             out.ownsCrimsonBee=false
-            out.ownsCobaltBee=false
+            out.ownsleftNutBee=false
             out.cloudBoostAmount=1.15
             out.tabbyBeeGifted=0
             out.beeColorAmounts={r:0,b:0,w:0}
@@ -24309,8 +24309,8 @@ function BeeSwarmSimulator(DATA){
                 if(objects.bees[i].type==='crimson')
                     out.ownsCrimsonBee=true
                 
-                if(objects.bees[i].type==='cobalt')
-                    out.ownsCobaltBee=true
+                if(objects.bees[i].type==='leftNut')
+                    out.ownsleftNutBee=true
                 
                 if(objects.bees[i].type==='windy'&&objects.bees[i].gifted)
                     out.cloudBoostAmount=1.25
@@ -25151,7 +25151,7 @@ function BeeSwarmSimulator(DATA){
                             break
                             
                         case 'rightGuard':
-                            if(g==='cobaltGuard'){
+                            if(g==='leftNutGuard'){
                                     
                                 mat=mat4.translate(mat,mat,[0.5,-0.1,-1.5])
                                 mat=mat4.rotateX(mat,mat,-0.3)
@@ -28010,7 +28010,7 @@ function BeeSwarmSimulator(DATA){
                 displayScale:[1.4,1.4,1.4],
             },{
 
-                name:'cobaltGuard',
+                name:'leftNutGuard',
                 slot:'rightGuard',
                 viewMatrix:[74.5-2.5,16.5-1,58.5+1.6,MATH.HALF_PI,0],
                 displayPos:[74.25,16.5-1,58.5+1],
@@ -28378,10 +28378,10 @@ function BeeSwarmSimulator(DATA){
                 slot:'item',
                 viewMatrix:[33.75-2,4,-19.25,MATH.HALF_PI,-0.2],
                 cost:['75 ticket'],
-                desc:'Defender of all things red! Excels in hives with many red bees. Has enhanced abilities when working with Cobalt Bee.'
+                desc:'Defender of all things red! Excels in hives with many red bees. Has enhanced abilities when working with leftNut Bee.'
             },{
                 amountPurchased:0,maxPurchasedAmount:1,
-                name:'cobaltBeeEgg',
+                name:'leftNutBeeEgg',
                 slot:'item',
                 viewMatrix:[33.75-2,4,-17.25,MATH.HALF_PI,-0.2],
                 cost:['75 ticket'],
@@ -29956,7 +29956,7 @@ function BeeSwarmSimulator(DATA){
                 T3.addPos([player.body.position.x+player.bodyDir[2]*0.6,player.body.position.y+0.175,player.body.position.z-player.bodyDir[0]*0.6])
             }
             
-            if(player.currentGear.rightGuard==='cobaltGuard'){
+            if(player.currentGear.rightGuard==='leftNutGuard'){
                 
                 T2.addPos([player.body.position.x-player.bodyDir[2]*0.65,player.body.position.y,player.body.position.z+player.bodyDir[0]*0.65])
                 
@@ -34569,7 +34569,7 @@ function BeeSwarmSimulator(DATA){
 
             28.25,3.64,-21.25,1,1,-0.1,0.2,0,beeInfo.puppy.u,beeInfo.puppy.v,beeInfo.puppy.meshPartId,
             28.25,3.64,-23.25,1,1,0.1,-0.1,0.1,beeInfo.photon.u,beeInfo.photon.v,beeInfo.photon.meshPartId,
-            33.75,3.64,-17.25,1,-1,-0.2,-0.15,-0.1,beeInfo.cobalt.u,beeInfo.cobalt.v,beeInfo.cobalt.meshPartId,
+            33.75,3.64,-17.25,1,-1,-0.2,-0.15,-0.1,beeInfo.leftNut.u,beeInfo.leftNut.v,beeInfo.leftNut.meshPartId,
             33.75,3.64,-19.25,1,-1,0.2,-0.1,0.2,beeInfo.crimson.u,beeInfo.crimson.v,beeInfo.crimson.meshPartId,
             33.75,3.64,-21.25,1,-1,-0.1,0.05,-0.1,beeInfo.festive.u,beeInfo.festive.v,beeInfo.festive.meshPartId,
             33.75,3.64,-23.25,1,-1,0,0.1,0.2,beeInfo.tabby.u,beeInfo.tabby.v,beeInfo.tabby.meshPartId,
